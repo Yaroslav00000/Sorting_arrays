@@ -2,12 +2,7 @@
 #include <Windows.h>
 using namespace std;
 
-void degree(){
-	int a,n;
-	cout << "¬вед≥ть число: ";
-	cin >> a;
-	cout << "¬вед≥ть степ≥нь: ";
-	cin >> n;
+void degree(int a,int n){
 	int res = 1;
 	for (int i = 0; i < n; i++) {
 		res *= a;
@@ -18,6 +13,11 @@ void degree(){
 int main() {
     SetConsoleCP(1251);
     SetConsoleOutputCP(1251);
-	degree();
+	int a, n;
+	cout << "¬вед≥ть число: ";
+	cin >> a;
+	cout << "¬вед≥ть степ≥нь: ";
+	cin >> n;
+	degree(a,n);
     return 0;
 }
