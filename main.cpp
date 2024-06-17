@@ -4,7 +4,7 @@ using namespace std;
 
 bool is_perfect(int n) {
     int sum = 0;
-    for (int i = 1; i <= n; i++) {
+    for (int i = 1; i < n; i++) {
         if (n % i == 0) {
             sum += i;
         }
@@ -23,6 +23,8 @@ void find_perfect_numbers(int start, int end) {
     
 
 int main() {
+    SetConsoleCP(1251);
+    SetConsoleOutputCP(1251);
     int start, end;
     cout << "¬вед≥ть д≥апазон (початкове та к≥нцеве значенн€): ";
     cin >> start >> end;
