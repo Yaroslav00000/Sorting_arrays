@@ -17,6 +17,10 @@ void print_card(string rank, string suit) {
 
 int main() {
 	string rank, suit;
+	for (size_t i = 0; i < 255; i++)
+	{
+		cout << char(i) << endl;
+	}
 	cout << "+--------+" << endl;
 	cout << "| " << (char)003 << "      | " << endl;
 	cout << "|        | " << endl;
