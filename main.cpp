@@ -5,13 +5,16 @@ using namespace std;
 void Happy_number(int n) {
 	int sum1 = 0;
     int sum2 = 0;
-	n = 123321;
-    for (int i = 0; i <= 2; i++) {
-		sum1 += i;
+	int n2 = n / 1000;
+	n %= 1000;
+	for (size_t i = 0; i < 3; i++)
+	{
+		sum1 += n2 % 10;
+		sum2 += n % 10;
+		n2 /= 10;
+		n /= 10;
 	}
-    for (int i = 5; i <= 3; i--) {
-		sum2 += i;
-	}
+	cout << sum1 << " == " << sum2 << endl;
 	if (sum1 == sum2) {
 		cout << "Happy number" << endl;
 	}
@@ -26,6 +29,6 @@ int main() {
     int n;
     cout << "Enter a number: ";
     cin >> n;
-    Happy_number(123321);
+    Happy_number(n);
     return 0;
 }
